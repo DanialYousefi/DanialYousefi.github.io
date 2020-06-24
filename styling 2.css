@@ -1,0 +1,477 @@
+
+@import:'_AWresets.css'
+@import:'_AWtypography.css'
+@import: 'AWsidenav.css'
+
+
+                                             /*Variables that allow us to reuse values later*/
+:root {
+  /* Colours */
+  --black: #181818;
+  --grey: #8C8C8C;
+  --red: #FF473A;
+  /* Screen sizes */
+  --mobile: 0px;
+  --tablet: 600px;
+  --laptop: 900px;
+}
+
+
+
+                                             /*Mobile Grid*/
+@media screen and (min-width:0) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
+    width: 100%;
+    max-width: 1280px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .grid2 {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
+    width: 100%;
+    max-width: 1280px;
+  }
+}
+
+                                             /*Desktop Grid*/
+@media screen and (min-width:900px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    max-width: 1280px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .grid2 {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    max-width: 1440px;
+    height: 673px;
+  }
+  .grid3 {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    max-width: 1440px;
+    height: 443px;
+    margin-top: 50px;
+  }
+  .grid4 {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    max-width: 1440px;
+    height: 443px;
+  }
+  .gridcover {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    max-width: 1440px;
+    height: 520px;
+  }
+  .mySidenav {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    max-width: 700px;
+    height: 100%;
+    grid-gap: 20px;
+  }
+}
+
+                                             /*typeography*/
+li{
+  font-family: 'lato', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+
+h1{
+  font-family: 'NATS';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 49px;
+  line-height: 0;
+  letter-spacing: 0.04em;
+}
+
+h2{
+  font-family: 'Noto Sans';
+  font-style: bold;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 0px;
+  letter-spacing: 0.15em;
+}
+
+h3 {
+  font-family: 'NATS';
+  font-style: lighter;
+  font-weight: lighter;
+  font-size: 33px;
+  width: 438px;
+  line-height: 0px;
+  text-align: left;
+  letter-spacing: 0.11em;
+}
+
+                                             /*Nav*/
+nav{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.logo-wrapper {
+  grid-column: 1 / span 9;
+}
+
+.logo{
+  max-width: 100px;
+  padding-top: 10px;
+
+}
+
+ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  grid-column: 10 / span 3;
+  align-items: centre;
+}
+
+
+                                             /*body*/
+.coverphoto{
+  grid-column: 1 / span 12;
+  background: url("../images/mainpic.jpg") no-repeat center center;
+  background-size: cover;
+  height: 520px;
+}
+
+                                             /*introductory section*/
+.bottlephoto {
+  background: url("../images/bottle.png") no-repeat center center;
+  background-size: cover;
+  max-height: 541px;
+  max-width: 560px;
+  grid-column: 8 / span 5;
+  padding-top: 180px;
+  position: inherit;
+}
+
+.emblem {
+  backround: white;
+  position: relative;
+  height: 29px;
+  animation-name: myanimation;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes myanimation {
+  0% {opacity:0;}
+  100% {Opacity:100;}
+}
+
+
+.intro-text{
+
+  grid-column: 2 / span 5;
+  font-family: 'lato', sans-serif;
+  font-weight: thin;
+  position: static;
+  max-width: 621px;
+  max-height: 192px;
+  left: 190px;
+  margin-top: 180px;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0.08em;
+}
+
+                                             /*Temperature section*/
+.temperature-text{
+  grid-column: 8 / span 4;
+  position: inherit;
+  max-width: 550px;
+  min-height: 128px;
+  left: 920px;
+  top: 1688px;
+  font-family: 'lato';
+  font-style: thin;
+  font-weight: thin;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0.1em;
+  margin-top:100px;
+  margin-left: 70px;
+}
+
+.insulation-title{
+  width: 439px;
+}
+
+.warm {
+  grid-column: 3 / span 1;
+  height: 76px;
+  width: 76px;
+  background: url("../images/warm.png") no-repeat center;
+  }
+
+.warm:hover {
+  background: url("../images/warmtop.png") no-repeat center;
+  height: 99px;
+  width: 99px;
+  transition: 0.13s;
+}
+
+
+.temperature-photo {
+  background: url("../images/tempcoverinitial.png") no-repeat center ;
+  background-size: 100%;
+  max-height: 450px;
+  max-width: 835px;
+  grid-column: 1 / span 7;
+  position: inherit;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.3s;
+   transition-timing-function: ease-in-out;
+}
+
+
+.temperature-photo:hover {
+  background: url("../images/tempcoverafter.png") no-repeat center;
+  background-size: 100%;
+  max-height: 450px;
+  max-width: 835px;
+}
+
+.temp-button {
+  padding: 1rem;
+  border: 0;
+  background: black;
+  color: white;
+  font-weight: bold;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in;
+}
+
+.temp-button:hover {
+  padding: 1rem;
+  border: 0;
+  background: orange;
+  color: black;
+  font-weight: bold;
+}
+
+                                             /* SIDENAV IN TEMPERATURE SECTION */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  right:0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 140px;
+  transition: 0.4s;
+  animation-timing-function: ease-in-out;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: 100px 100px 200px;
+  grid-gap: 20px;
+
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+                                             /* SIDENAV TEXT */
+.sidenav h4{
+  font-family: 'NATS';
+  color: white;
+  width: 351px
+  height: 75;
+  font-style: lighter;
+  font-weight: lighter;
+  font-size: 29px;
+  color: white;
+  text-align: center;
+  display: grid;
+
+  letter-spacing: 0.11em;
+  grid-column: 2 / span 4;
+}
+
+.sidenav p{
+  font-family: 'lato', sans-serif;
+  color: white;
+  font-weight: thin;
+
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  display: grid;
+  grid-column: 2 / span 4;
+}
+                                             /* SIDENAV Buttons */
+
+.hot {
+  grid-column: 2 / span 1;
+  height: 76px;
+  width: 76px;
+  background: url("../images/hot.png") no-repeat center;
+
+}
+
+.hot:hover {
+  background: url("../images/hottop.png") no-repeat center;
+  height: 99px;
+  width: 99px;
+  transition: 0.13s;
+}
+
+.warm {
+  grid-column: 3 / span 1;
+  height: 76px;
+  width: 76px;
+  background: url("../images/warm.png") no-repeat center;
+  }
+
+.warm:hover {
+  background: url("../images/warmtop.png") no-repeat center;
+  height: 99px;
+  width: 99px;
+  transition: 0.13s;
+}
+
+.cold {
+  grid-column: 4 / span 1;
+  height: 76px;
+  width: 76px;
+  background: url("../images/cold.png") no-repeat center ;
+}
+.cold:hover {
+  background: url("../images/coldtop.png") no-repeat center ;
+  height: 99px;
+  width: 99px;
+  transition: 0.13s;
+}
+
+.icecold {
+  height: 76px;
+  width: 76px;
+  grid-column: 5 / span 1;
+  background: url("../images/icecold.png") no-repeat center;
+}
+.icecold:hover {
+  background: url("../images/icecoldtop.png") no-repeat center;
+  height: 99px;
+  width: 99px;
+  transition: 0.13s;
+}
+
+
+                                             /* END OF SIDENAV IN TEMPERATURE SECTION */
+
+
+
+
+
+                                             /*Design section*/
+.design-text{
+  position: inherit;
+  grid-column: 2 / span 5;
+  font-family: 'lato', sans-serif;
+  position: static;
+  max-width: 621px;
+  max-height: 250px;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0.1em;
+  margin-top:100px;
+}
+
+
+.design-photo {
+  background: url("../images/designphoto.png") no-repeat center center;
+  background-size: cover;
+  max-height: 573px;
+  max-width: 580px;
+  grid-column: 8 / span 5;
+
+}
+
+.handle {
+  grid-column: 1 / span 6;
+  background: url("../images/handlee.png") no-repeat center center;
+  background-size: cover;
+  min-height: 939px;
+}
+
+
+
+                                             /*features section*/
+
+
+
+.features-text{
+  position: inherit;
+  grid-column: 8 / span 4;
+  font-family: 'lato', sans-serif;
+  position: static;
+  width: 500px;
+  max-height: 250px;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0.1em;
+  margin-top:180px;
+}
+
+
+.infographic {
+  background: url("../images/infographicinitial.png") no-repeat center center;
+  background-size: 100%;
+  height: 600px;
+  width: 600px;
+  grid-column: 1 / span 6;
+  margin-left: 50px;
+  grid-row: 1;
+  display: grid;
+  padding-top: 130px;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.3s;
+   transition-timing-function: ease-in-out;
+}
+
+.infographic:hover {
+  background: url("../images/infographic2 1.png") no-repeat center center;
+  background-size: 100%;
+  height: 600px;
+  width: 600px;
+
+}
